@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Trang SubMIT{% endblock title %}
+
+{% block header %}<h2>Trang SubMIT</h2>{% endblock header %}
+
+{% block content %}
+    <p>Đây là trang submit form, nơi bạn có thể nhập câu hỏi hoặc văn bản của mình và gửi đi.</p>
+    
+    <form action="{{ url_for('pages.handleForm') }}" method="get">
+        <label for="username">Hãy nhập câu hỏi của bạn:</label><br>
+        <textarea id="username" name="username" rows="4" cols="50" placeholder="Nhập câu hỏi tại đây..." required></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if username %}
+        <h3>Tôi sẽ trả lời câu hỏi của bạn, {{ username }}!</h3>
+    {% endif %}
+{% endblock content %}
