@@ -4,7 +4,7 @@ import os
 import chromadb
 from typing import List
 from dotenv import load_dotenv
-from Loadfile import loadfilecsv,convertDocument
+from RAG.Loadfile import loadfilecsv,convertDocument
 class GeminiEmbeddingFunction(EmbeddingFunction):
     """
     Custom embedding function using the Gemini AI API for document retrieval.

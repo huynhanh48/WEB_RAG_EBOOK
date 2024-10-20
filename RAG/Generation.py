@@ -5,8 +5,8 @@ import os
 import chromadb
 from typing import List
 from dotenv import load_dotenv
-from Loadfile import loadfilecsv, convertDocument
-from Embbeding import get_relevant_passage, load_chroma_collection, create_chroma_db, db
+from RAG.Loadfile import loadfilecsv, convertDocument
+from RAG.Embbeding import get_relevant_passage, load_chroma_collection, create_chroma_db, db
 
 def make_rag_prompt(query, relevant_passage):
     if isinstance(relevant_passage, list) and len(relevant_passage) > 0:
